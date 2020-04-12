@@ -1,12 +1,11 @@
 import React from "react"
-import LinkFooter from "@components/link-footer"
 import SEO from "@components/seo"
 
 const ContactUs = () => {
   return (
     <div className="page contact-us">
       <SEO title="Contact Us" />
-      <div className="bg--off-white">
+      <div className="bg--off-white page-height">
         <div className="container pb100">
           <div className="row flex-ai--fs flex-col--sm">
             <div className="flex flex-col flex-ai--fs color--black col-6 flex-jc--fs mb50">
@@ -79,7 +78,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <LinkFooter to="/" text="Home" />
     </div>
   )
 }

@@ -49,7 +49,7 @@ const IndexPage = () => {
 
   return (
     <div className="home page">
-      <SEO title="Home" />
+      <SEO />
       <div className="bg--royal-blue">
         <div className="container--small mt80--neg--sm">
           <div className="row">
