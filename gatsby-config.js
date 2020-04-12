@@ -7,7 +7,7 @@ module.exports = {
     description: `A secure and private way to share your immune status`,
     heroDescription: `We’re helping society return to post-COVID-19 normal by rebuilding public trust while respecting personal privacy.`,
     author: `@imsafepass`,
-    siteURL: `https://quizzical-goldwasser-10d083.netlify.com`,
+    siteURL: `https://imsafepass.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
