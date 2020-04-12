@@ -36,16 +36,17 @@ const IndexPage = () => {
     }
   `)
 
-  const [
-    horizontalScrollTransformPerc,
-    setHorizontalScrollTransformPerc,
-  ] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0)
   const assets = getAssets(allFile)
 
   const { title, description, shortTitle, heroDescription } = site.siteMetadata
   const slides = carouselNodes({ title, shortTitle, assets })
+  const slidePaddingLeft = 120
   const slideSize = 500
-  const horizontalScrollLength = slideSize * slides.length
+  const horizontalScrollLength =
+    slideSize * slides.length + slideSize * slidePaddingLeft
+
+  const slideXTransform = (slideSize + slidePaddingLeft) * currentSlide
 
   return (
     <div className="home page">
@@ -84,8 +85,8 @@ const IndexPage = () => {
             </h4>
             <Button
               to="/contact-us"
-              type="dark-purple,large"
-              className="mh50 mh0--sm mv50--sm w125--sm"
+              type="dark-purple"
+              className="ml50--lg mv50--sm"
             >
               Get Involved
             </Button>
@@ -117,42 +118,35 @@ const IndexPage = () => {
               className="home__horizontal-scroll flex flex-row flex-jc--fs mb100 hidden-sm"
               style={{
                 minWidth: horizontalScrollLength,
-                transform: `translateX(-${horizontalScrollTransformPerc}%)`,
+                transform: `translateX(-${slideXTransform}px)`,
               }}
             >
-              {slides.map(child =>
+              {slides.map((child, ind) =>
                 React.cloneElement(child, {
-                  className: `w${slideSize}`,
+                  className: `w${slideSize} ${
+                    ind === 0 ? "" : `pl${slidePaddingLeft}`
+                  }`,
                 })
               )}
             </div>
-            {horizontalScrollTransformPerc ? (
+            {currentSlide > 0 ? (
               <Button
                 className="absolute hidden-sm carousel-nav"
                 style={{ bottom: 50, left: 50 }}
                 type="left-icon,royal-blue"
-                onClick={() =>
-                  setHorizontalScrollTransformPerc(
-                    horizontalScrollTransformPerc - 100.0 / slides.length
-                  )
-                }
+                onClick={() => setCurrentSlide(currentSlide - 1)}
               >
                 <ShortArrowLeft /> Less
               </Button>
             ) : null}
 
             {/* Only show the button if we have more than two items left */}
-            {horizontalScrollTransformPerc >=
-            (100 / slides.length) * (slides.length - 2) ? null : (
+            {currentSlide >= slides.length - 1 ? null : (
               <Button
                 className="absolute hidden-sm carousel-nav"
                 style={{ bottom: 50, right: 50 }}
                 type="icon,royal-blue"
-                onClick={() =>
-                  setHorizontalScrollTransformPerc(
-                    horizontalScrollTransformPerc + 100.0 / slides.length
-                  )
-                }
+                onClick={() => setCurrentSlide(currentSlide + 1)}
               >
                 More <ShortArrowRight />
               </Button>

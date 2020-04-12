@@ -27,6 +27,7 @@ const Alternators = ({ alternators }) => (
             className={`row ${first ? "" : "mt100"} ${last ? "pb100" : ""} ${
               odd ? "flex-row-r flex-col--sm" : ""
             }`}
+            key={title}
           >
             <div className="col-6 relative mb40--sm">
               <img

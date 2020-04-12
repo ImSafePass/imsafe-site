@@ -2,19 +2,7 @@
 
 .home {
   &__horizontal-scroll {
-    transition: transform 0.3s ease;
-
-    > div {
-      &:not(:first-child) {
-        padding-left: 120px;
-      }
-    }
-
-    &.hidden-lg > div {
-      &:not(:first-child) {
-        padding-left: 40px;
-      }
-    }
+    transition: transform 0.4s ease-in-out;
   }
 
   @media only screen and (min-width: $breakpoint-large) {
