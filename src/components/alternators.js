@@ -4,7 +4,11 @@ import RightArrow from "@images/icons/right-arrow.svg"
 
 import Button from "./button"
 
-const Alternators = ({ alternators }) => (
+const Alternators = ({
+  alternators,
+  headerColor = "color--dark-purple",
+  textColor = "color--black",
+}) => (
   <>
     {alternators.map(
       (
@@ -39,8 +43,17 @@ const Alternators = ({ alternators }) => (
               <div className="radial-blur-circle radial-blur-circle--right" />
             </div>
             <div className="col-6 flex flex-col center--sm left">
-              <h2 className="color--dark-purple pr100 pr0--sm">{title}</h2>
-              <p className="mr20 mr0--sm">{content}</p>
+              <h2 className={`${headerColor} pr100 pr0--sm`}>{title}</h2>
+              {content.split("\n").map((con, ind) => (
+                <p
+                  key={con.slice(0, 10)}
+                  className={`mr20 mr0--sm ${textColor} ${
+                    ind !== 0 ? "mt5" : ""
+                  }`}
+                >
+                  {con}
+                </p>
+              ))}
               <Button
                 to={to}
                 type="transparent,icon"
