@@ -5,6 +5,7 @@ module.exports = {
       "A secure, private, digital immunological record that allows us to get to a new normal faster.",
     subtitle:
       "Gain confidence in your risk profile. Build trust through voluntary sharing.",
+    imgSrc: "solutionWalkingIll",
   },
   sections: [
     {

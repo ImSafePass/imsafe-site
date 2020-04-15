@@ -28,19 +28,12 @@ const Alternators = ({
     <>
       {alternators.map(
         (
-          {
-            title,
-            content,
-            img: { src, className },
-            button = { text: "Learn more", to: "/solution" },
-          },
+          { title, content, img: { src, className }, linkText, linkDest },
           ind
         ) => {
           const first = ind === 0
           const last = ind === alternators.length - 1
           const odd = ind % 2 !== 0
-
-          const { text, to } = button
 
           return (
             <div
@@ -70,14 +63,16 @@ const Alternators = ({
                     {con}
                   </p>
                 ))}
-                <Button
-                  to={to}
-                  type="transparent,icon"
-                  className="flex-jc--c--sm hidden"
-                >
-                  <h4>{text}</h4>
-                  <RightArrow />
-                </Button>
+                {linkText && linkDest ? (
+                  <Button
+                    to={linkDest}
+                    type="transparent,icon"
+                    className="flex-jc--c--sm"
+                  >
+                    <h4>{linkText}</h4>
+                    <RightArrow />
+                  </Button>
+                ) : null}
               </div>
             </div>
           )

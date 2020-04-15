@@ -20,7 +20,7 @@ const { hero, cta, sections, applications } = content
 const IndexPage = () => {
   const { allFile } = useStaticQuery(graphql`
     query HomeQuery {
-      allFile(filter: { relativeDirectory: { eq: "home" } }) {
+      allFile {
         nodes {
           publicURL
           relativeDirectory
@@ -65,7 +65,7 @@ const IndexPage = () => {
           <div className="row">
             <div className="col-4">
               <img
-                alt="Illustration of doctor with clipboard"
+                alt={hero.title}
                 src={assets[hero.imgSrc]}
                 className="mt20 mh20 mr0--sm ml40--sm w325 w250--sm"
               />
@@ -79,7 +79,7 @@ const IndexPage = () => {
       </div>
 
       <img
-        src={assets.heroWave}
+        src={assets.waveDownLeft}
         alt=""
         className="bg--transparent w100p pt40--sm"
         style={{ marginTop: "-15vw" }}
@@ -108,7 +108,7 @@ const IndexPage = () => {
 
       <img
         alt=""
-        src={assets.applicationsWave}
+        src={assets.waveUpRight}
         className="bg--transparent w100p"
         style={{ marginBottom: "-5px" }}
       />
@@ -157,7 +157,7 @@ const IndexPage = () => {
         <div className="container--large pb150 hidden-sm">
           <h4 className="left color--dark-purple">How it works</h4>
           <img
-            src={assets.diagram}
+            src={assets.homeDiagram}
             width="108%"
             style={{ marginLeft: "-5%" }}
             alt="Diagram: Variety of data inputs (labs, wearables, etc) and variety of outputs (nursing homes, employers, etc)."

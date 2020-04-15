@@ -29,7 +29,7 @@ const Solution = () => {
           <div className="col-4 mt50--neg--sm ml10--neg--sm mb40--sm">
             <img
               alt="Illustration of doctor with clipboard"
-              src={assets.walkingPhone}
+              src={assets[hero.imgSrc]}
               className="mt20--lg mb20--sm mh20--lg w325 w300--sm"
             />
           </div>
