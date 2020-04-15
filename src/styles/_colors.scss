@@ -49,3 +49,13 @@
 .color--royal-blue {
   color: $color-royal-blue;
 }
+
+svg.fill--white path {
+  fill: $color-white;
+}
+svg.fill--royal-blue path {
+  fill: $color-royal-blue;
+}
+svg.fill--off-white path {
+  fill: $color-off-white;
+}

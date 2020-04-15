@@ -46,3 +46,7 @@ input,
 textarea {
   box-sizing: border-box;
 }
+
+.flip-h {
+  transform: scaleX(-1);
+}

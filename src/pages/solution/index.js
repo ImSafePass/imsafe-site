@@ -1,0 +1,84 @@
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
+import { getAssets } from "@utils/getAssets"
+
+import WaveUpRight from "@images/waves/wave-up-right.svg"
+
+import content from "./content"
+
+const { hero, sections } = content
+
+const Solution = () => {
+  const { allFile } = useStaticQuery(graphql`
+    query SolutionsQuery {
+      allFile {
+        nodes {
+          publicURL
+          relativeDirectory
+          name
+        }
+      }
+    }
+  `)
+
+  const assets = getAssets(allFile)
+  return (
+    <div className="page solution">
+      <div className="container bg--white pb70">
+        <div className="row">
+          <div className="col-4 mt50--neg--sm ml10--neg--sm mb40--sm">
+            <img
+              alt="Illustration of doctor with clipboard"
+              src={assets.walkingPhone}
+              className="mt20--lg mb20--sm mh20--lg w325 w300--sm"
+            />
+          </div>
+          <div className="pl50--lg col-8 flex-col center--sm">
+            <h1>{hero.title}</h1>
+            <h5>{hero.subtitle}</h5>
+          </div>
+        </div>
+      </div>
+
+      <WaveUpRight className="fill--off-white bg--transparent" />
+
+      {sections.map((section, index) => {
+        const even = index % 2 === 0
+        return (
+          <>
+            {even ? (
+              index === 0 ? null : (
+                <WaveUpRight className="fill--off-white bg--royal-blue" />
+              )
+            ) : (
+              <WaveUpRight className="fill--royal-blue bg--transparent flip-h" />
+            )}
+            <div
+              className={`${
+                even ? "bg--gradient--off-white-white" : "bg--royal-blue"
+              } pt130 pb150 pv50--sm mt5--neg`}
+            >
+              <div
+                className={`container--small center--sm ${
+                  even ? "color--black" : "color--white"
+                }`}
+              >
+                <h2>{section.title}</h2>
+                <p>{section.text}</p>
+                {section.cta ? (
+                  <div className="left--sm mt40--sm">
+                    <h4>{section.cta.title}</h4>
+                    <p>{section.cta.text}</p>
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          </>
+        )
+      })}
+    </div>
+  )
+}
+
+export default Solution
