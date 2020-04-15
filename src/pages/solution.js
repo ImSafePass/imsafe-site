@@ -4,8 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { getAssets } from "@utils/getAssets"
 
 import WaveUpRight from "@images/waves/wave-up-right.svg"
-
-import content from "./content"
+import content from "@utils/solution-content"
 
 const { hero, sections } = content
 
@@ -60,16 +59,16 @@ const Solution = () => {
               } pt130 pb150 pv50--sm mt5--neg`}
             >
               <div
-                className={`container--small center--sm ${
+                className={`container--narrow center--sm ${
                   even ? "color--black" : "color--white"
                 }`}
               >
                 <h2>{section.title}</h2>
-                <p>{section.text}</p>
+                <p className="font-p2">{section.text}</p>
                 {section.cta ? (
-                  <div className="left--sm mt40--sm">
+                  <div className="left--sm mt40">
                     <h4>{section.cta.title}</h4>
-                    <p>{section.cta.text}</p>
+                    <p className="font-p2">{section.cta.text}</p>
                   </div>
                 ) : null}
               </div>

@@ -77,6 +77,19 @@
   }
 }
 
+@mixin p2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+
+  @media only screen and (max-width: $breakpoint-desk) {
+    font-size: 19px;
+    line-height: 30px;
+  }
+}
+
 $color-royal-blue: #3341c0;
 $color-off-white: #eaf2fa;
 $color-white: #fff;

@@ -48,6 +48,10 @@ body {
   }
 }
 
+.container--narrow {
+  max-width: 800px;
+}
+
 .row {
   position: relative;
   width: 100%;
