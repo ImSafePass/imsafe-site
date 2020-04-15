@@ -48,25 +48,25 @@ const Solution = () => {
           <>
             {even ? (
               index === 0 ? null : (
-                <WaveUpRight className="fill--off-white bg--royal-blue" />
+                <WaveUpRight className="fill--off-white bg--transparent" />
               )
             ) : (
-              <WaveUpRight className="fill--royal-blue bg--transparent flip-h" />
+              <WaveUpRight className="fill--white bg--off-white flip-h" />
             )}
             <div
               className={`${
-                even ? "bg--gradient--off-white-white" : "bg--royal-blue"
+                even ? "bg--off-white" : "bg--white"
               } pt130 pb150 pv50--sm mt5--neg`}
             >
               <div
                 className={`container--narrow center--sm ${
-                  even ? "color--black" : "color--white"
+                  even ? "color--black" : "color--black"
                 }`}
               >
-                <h2>{section.title}</h2>
+                <h2 className="color--dark-purple">{section.title}</h2>
                 <p className="font-p2">{section.text}</p>
                 {section.cta ? (
-                  <div className="left--sm mt40">
+                  <div className="mt40">
                     <h4>{section.cta.title}</h4>
                     <p className="font-p2">{section.cta.text}</p>
                   </div>
