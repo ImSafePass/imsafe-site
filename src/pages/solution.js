@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { getAssets } from "@utils/getAssets"
 
 import WaveUpRight from "@images/waves/wave-up-right.svg"
-import content from "@utils/solution-content"
+import content from "@content/solution-content"
 
 const { hero, sections } = content
 

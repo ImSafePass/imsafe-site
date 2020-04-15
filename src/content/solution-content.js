@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   hero: {
     // NOTE: I cut off the beginning
     title:

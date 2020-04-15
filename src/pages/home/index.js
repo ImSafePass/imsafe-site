@@ -9,23 +9,17 @@ import { getAssets } from "@utils/getAssets"
 import SEO from "@components/seo"
 import Button from "@components/button"
 import Alternators from "@components/alternators"
+import HomeSlide from "@components/home-slide"
 
-import carouselNodes from "@utils/carouselContent"
-import homeAlternators from "@utils/homeAlternators"
+import content from "@content/home-content"
 
 import "./home.scss"
 
+const { hero, cta, sections, applications } = content
+
 const IndexPage = () => {
-  const { site, allFile } = useStaticQuery(graphql`
+  const { allFile } = useStaticQuery(graphql`
     query HomeQuery {
-      site {
-        siteMetadata {
-          description
-          title
-          shortTitle
-          heroDescription
-        }
-      }
       allFile(filter: { relativeDirectory: { eq: "home" } }) {
         nodes {
           publicURL
@@ -39,10 +33,25 @@ const IndexPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const assets = getAssets(allFile)
 
-  const { title, description, shortTitle, heroDescription } = site.siteMetadata
-  const slides = carouselNodes({ title, shortTitle, assets })
   const slidePaddingLeft = 120
   const slideSize = 500
+  const carouselSlides = applications.map(application => (
+    <HomeSlide
+      {...application}
+      asset={assets[application.src]}
+      key={application.title}
+    />
+  ))
+
+  const slides = applications.map((application, ind) => (
+    <HomeSlide
+      {...application}
+      asset={assets[application.src]}
+      key={application.title}
+      className={`w${slideSize} ${ind === 0 ? "" : `pl${slidePaddingLeft}`}`}
+    />
+  ))
+
   const horizontalScrollLength =
     slideSize * slides.length + slides.length * slidePaddingLeft
 
@@ -57,13 +66,13 @@ const IndexPage = () => {
             <div className="col-4">
               <img
                 alt="Illustration of doctor with clipboard"
-                src={assets.heroIll}
+                src={assets[hero.imgSrc]}
                 className="mt20 mh20 mr0--sm ml40--sm w325 w250--sm"
               />
             </div>
             <div className="flex-col col-8 color--white center--sm left row">
-              <h1>{description}</h1>
-              <h5>{heroDescription}</h5>
+              <h1>{hero.title}</h1>
+              <h5>{hero.subtitle}</h5>
             </div>
           </div>
         </div>
@@ -79,16 +88,13 @@ const IndexPage = () => {
       <div className="bg--white">
         <div className="container--large">
           <div className="row color--dark-purple mv60 flex-jc--c mb30--sm">
-            <h4 className="center--sm">
-              We're looking for partners in healthcare, government, tech, and
-              more.
-            </h4>
+            <h4 className="center--sm">{cta.text}</h4>
             <Button
-              to="/contact-us"
+              to={cta.dest}
               type="dark-purple"
               className="ml50--lg mv50--sm"
             >
-              Get Involved
+              {cta.buttonText}
             </Button>
           </div>
         </div>
@@ -96,7 +102,7 @@ const IndexPage = () => {
 
       <div className="bg--gradient--off-white-white">
         <div className="container--small pt80">
-          <Alternators alternators={homeAlternators({ assets, shortTitle })} />
+          <Alternators alternators={sections} />
         </div>
       </div>
 
@@ -113,7 +119,7 @@ const IndexPage = () => {
             <h4 className="color--dark-purple left mt20 mb20 flex-as--fs">
               Potential applications
             </h4>
-            <Carousel className="hidden-lg">{slides}</Carousel>
+            <Carousel className="hidden-lg">{carouselSlides}</Carousel>
             <div
               className="home__horizontal-scroll flex flex-row flex-jc--fs mb100 hidden-sm"
               style={{
@@ -121,13 +127,7 @@ const IndexPage = () => {
                 transform: `translateX(-${slideXTransform}px)`,
               }}
             >
-              {slides.map((child, ind) =>
-                React.cloneElement(child, {
-                  className: `w${slideSize} ${
-                    ind === 0 ? "" : `pl${slidePaddingLeft}`
-                  }`,
-                })
-              )}
+              {slides}
             </div>
             {currentSlide > 0 ? (
               <button

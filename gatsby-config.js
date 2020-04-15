@@ -1,11 +1,13 @@
 const path = require("path")
 
+const hero = require("./src/content/home-content").hero
+
 module.exports = {
   siteMetadata: {
     title: `ImSafe Pass`,
     shortTitle: `ImSafe`,
-    description: `A secure and private way to share your immune status`,
-    heroDescription: `We can get back to normal in the wake of Covid-19 without compromising civil liberties or personal privacy.`,
+    description: hero.title,
+    heroDescription: hero.subtitle,
     author: `@imsafepass`,
     siteURL: `https://imsafepass.com`,
   },
@@ -36,7 +38,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
-        alias: ["components", "pages", "styles", "images", "utils"].reduce(
+        alias: [
+          "components",
+          "pages",
+          "styles",
+          "images",
+          "utils",
+          "content",
+        ].reduce(
           (obj, el) => ({
             ...obj,
             [`@${el}`]: path.resolve(__dirname, `src/${el}`),
