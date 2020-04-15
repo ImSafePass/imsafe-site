@@ -8,7 +8,7 @@ module.exports = {
     shortTitle: `ImSafe`,
     description: hero.title,
     heroDescription: hero.subtitle,
-    author: `@imsafepass`,
+    author: `@ImSafePass`,
     siteURL: `https://imsafepass.com`,
   },
   plugins: [
