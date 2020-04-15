@@ -5,7 +5,7 @@ module.exports = {
     title: `ImSafe Pass`,
     shortTitle: `ImSafe`,
     description: `A secure and private way to share your immune status`,
-    heroDescription: `We’re helping society return to post-COVID-19 normal by rebuilding public trust while respecting personal privacy.`,
+    heroDescription: `We can get back to normal in the wake of Covid-19 without compromising civil liberties or personal privacy.`,
     author: `@imsafepass`,
     siteURL: `https://imsafepass.com`,
   },

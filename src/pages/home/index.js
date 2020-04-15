@@ -44,7 +44,7 @@ const IndexPage = () => {
   const slidePaddingLeft = 120
   const slideSize = 500
   const horizontalScrollLength =
-    slideSize * slides.length + slideSize * slidePaddingLeft
+    slideSize * slides.length + slides.length * slidePaddingLeft
 
   const slideXTransform = (slideSize + slidePaddingLeft) * currentSlide
 
@@ -107,7 +107,7 @@ const IndexPage = () => {
         style={{ marginBottom: "-5px" }}
       />
 
-      <div className="row bg--off-white flex-col">
+      <div className="row bg--gradient--off-white-white flex-col">
         <div className="container--large pb100--sm">
           <div className="relative">
             <h4 className="color--dark-purple left mt20 mb20 flex-as--fs">
@@ -130,35 +130,36 @@ const IndexPage = () => {
               )}
             </div>
             {currentSlide > 0 ? (
-              <Button
-                className="absolute hidden-sm carousel-nav"
+              <button
+                className="btn btn--royal-blue absolute hidden-sm carousel-nav"
                 style={{ bottom: 50, left: 50 }}
                 type="left-icon,royal-blue"
                 onClick={() => setCurrentSlide(currentSlide - 1)}
               >
-                <ShortArrowLeft /> Less
-              </Button>
+                <ShortArrowLeft />
+              </button>
             ) : null}
 
             {/* Only show the button if we have more than two items left */}
             {currentSlide >= slides.length - 1 ? null : (
-              <Button
-                className="absolute hidden-sm carousel-nav"
+              <button
+                className="btn btn--royal-blue absolute hidden-sm carousel-nav"
                 style={{ bottom: 50, right: 50 }}
                 type="icon,royal-blue"
                 onClick={() => setCurrentSlide(currentSlide + 1)}
               >
-                More <ShortArrowRight />
-              </Button>
+                <ShortArrowRight />
+              </button>
             )}
           </div>
         </div>
 
-        <div className="container--large pb150 hidden">
+        <div className="container--large pb150 hidden-sm">
           <h4 className="left color--dark-purple">How it works</h4>
           <img
             src={assets.diagram}
-            width="100%"
+            width="108%"
+            style={{ marginLeft: "-5%" }}
             alt="Diagram: Variety of data inputs (labs, wearables, etc) and variety of outputs (nursing homes, employers, etc)."
           />
         </div>
