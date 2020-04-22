@@ -54,3 +54,8 @@ textarea {
 .flip-v {
   transform: scaleY(-1);
 }
+
+.flip-h-v,
+.flip-v-h {
+  transform: scale(-1, -1);
+}

@@ -1,9 +1,11 @@
 module.exports = {
   hero: {
-    title: `Our mission is to safely return to normal without giving up our private, personal information.`,
+    title: `Our mission`,
     subtitle: `Big security. Small tech. A solution custom-built to protect your civil liberties.`,
   },
   paragraph: {
+    title:
+      "Safely return to normal without giving up our private, personal information.",
     text: `We believe that some kind of verified immunological passport is an essential next step for public health. We also believe such a solution does not need to put our privacy at risk.\nEarly on in the roll-out of shelter-in-place mandates and business shutdowns, we were taken aback by the rapid suspension of basic rights across many countries. Many have signaled a desire to extend government into the management and scoring of personal biological data. Some governments have already launched intrusive, mandatory programs to track citizens’ location, monitor their financial transactions, and delimit their movement in society.\nWe are deeply concerned by these trends, and believe a superior and privacy-protecting alternative can resolve the urgency motivating governments to sideline civil liberties in order to reopen economies. This is what we're racing to build: a platform that keeps data in individuals' hands, addresses critical error potential in singular test results, and allows for easy sharing with user consent.`,
   },
   valueProps: {

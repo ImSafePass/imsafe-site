@@ -38,7 +38,7 @@ module.exports = {
       title: `A vital institution built for trust`,
       content: `There’s widespread discomfort with how large institutions treat our data these days. We founded ImSafe to solve this urgent problem without sacrificing an inch of privacy, individual control, or civil liberty. Your personal records are never shared without your explicit approval and consent, encrypted at rest and in transit, and separated from identifying information.`,
       linkText: "Learn more",
-      linkDest: null, // Will show up if destination provided
+      linkDest: "/mission", // Will show up if destination provided
     },
   ],
   applications: [

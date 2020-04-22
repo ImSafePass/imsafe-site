@@ -1,15 +1,5 @@
 @import "@styles/variables";
 
-main .page > div:first-child {
-  padding-top: $header-height;
-}
-
-main,
-main .page,
-main.page > div {
-  width: 100%;
-}
-
 .nav {
   position: absolute;
   top: 100px;
