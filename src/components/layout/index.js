@@ -10,7 +10,7 @@ import "./layout.scss"
 
 const menuItems = [
   { to: "/solution", text: "Our Solution" },
-  // { to: "/mission", text: "Mission" },
+  { to: "/mission", text: "Mission" },
   // { to: "/about", text: "About" },
   { to: "/contact-us", text: "Contact Us" },
 ]

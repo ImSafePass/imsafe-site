@@ -18,7 +18,7 @@ module.exports = {
       title: "A metric of health available to all",
       content: `ImSafe combines medical testing, the latest research, and statistical analysis to evaluate each individual’s immunological safety status. As laboratory and at-home tests become more broadly available, both antibody and active infection tests will provide critical results. We stitch together a variety of data points to arrive at a high-confidence, actionable score of your personal safety and safety to others.`,
       linkText: "Learn more",
-      linkDest: null, // Will show up if destination provided
+      linkDest: "/solution", // Will show up if destination provided
     },
     {
       img: {
@@ -28,7 +28,7 @@ module.exports = {
       title: `A path to a better new normal`,
       content: `Without a solution for establishing immune safety at scale, we could see an incredibly prolonged lockdown with unimaginable social and economic consequences. While frequent testing is a critical source of data, the error potential in each individual test means that no single exam should inform decision making. ImSafe is uniquely focused on solving this problem without compromising individual privacy or public health.`,
       linkText: "Learn more",
-      linkDest: "/contact-us" || null, // Will show up if destination provided
+      linkDest: "/solution", // Will show up if destination provided
     },
     {
       img: {
