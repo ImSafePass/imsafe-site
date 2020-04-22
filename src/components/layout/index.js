@@ -9,8 +9,8 @@ import LinkFooter from "../link-footer"
 import "./layout.scss"
 
 const menuItems = [
-  // { to: "/solution", text: "Our Solution" },
-  // { to: "/trust", text: "Trust" },
+  { to: "/solution", text: "Our Solution" },
+  { to: "/mission", text: "Our Mission" },
   // { to: "/about", text: "About" },
   { to: "/contact-us", text: "Contact Us" },
 ]
@@ -79,9 +79,7 @@ const Layout = ({ children }) => {
                 ))}
               </div>
             </div>
-            {currentPageIndex === -1 || true ? null : (
-              <LinkFooter {...nextPage} />
-            )}
+            {currentPageIndex === -1 ? null : <LinkFooter {...nextPage} />}
             <Footer siteTitle={title} author={author} />
           </div>
         )

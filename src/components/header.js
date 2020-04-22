@@ -14,7 +14,7 @@ const Header = ({ siteTitle, menuItems, menuState, setMenuState }) => (
           <Link to="/">{siteTitle}</Link>
         </h4>
       </div>
-      <div className="flex flex-jc--fe flex-ai--c hidden-sm">
+      <div className="flex flex-jc--fe flex-ai--c hidden-sm link-menu">
         {menuItems.map((item, ind) => (
           <h6 className={ind === 0 ? "" : "ml40"} key={ind}>
             {ind === menuItems.length - 1 ? (
@@ -22,7 +22,9 @@ const Header = ({ siteTitle, menuItems, menuState, setMenuState }) => (
                 {item.text}
               </Button>
             ) : (
-              <Link to={item.to}>{item.text}</Link>
+              <Link to={item.to} activeClassName="active">
+                {item.text}
+              </Link>
             )}
           </h6>
         ))}

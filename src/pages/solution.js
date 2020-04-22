@@ -1,81 +1,63 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
-import { getAssets } from "@utils/getAssets"
 
 import WaveUpRight from "@images/waves/wave-up-right.svg"
+import ManWithPhone from "@images/solution-man-phone.svg"
+import RightArrow from "@images/icons/right-arrow.svg"
+
 import content from "@content/solution-content"
 
 const { hero, sections } = content
 
 const Solution = () => {
-  const { allFile } = useStaticQuery(graphql`
-    query SolutionsQuery {
-      allFile {
-        nodes {
-          publicURL
-          relativeDirectory
-          name
-        }
-      }
-    }
-  `)
-
-  const assets = getAssets(allFile)
   return (
     <div className="page solution">
-      <div className="container bg--white pb70">
-        <div className="row">
-          <div className="col-4 mt50--neg--sm ml10--neg--sm mb40--sm">
-            <img
-              alt="Illustration of doctor with clipboard"
-              src={assets[hero.imgSrc]}
-              className="mt20--lg mb20--sm mh20--lg w325 w300--sm"
-            />
-          </div>
-          <div className="pl50--lg col-8 flex-col center--sm">
-            <h1>{hero.title}</h1>
-            <h5>{hero.subtitle}</h5>
+      <div className="bg--royal-blue">
+        <div className="container--small pb70--sm pb30">
+          <div className="row flex-col-r--sm">
+            <div className="pl50--lg col-6 flex-col center--sm color--white">
+              <h1>{hero.title}</h1>
+              <h5>{hero.subtitle}</h5>
+            </div>
+            <div className="col-6 mt120--neg--sm mb30--neg--sm ml10--neg--sm mb20--sm">
+              <ManWithPhone className="mb20--sm mh20--lg w400 w350--sm" />
+            </div>
           </div>
         </div>
       </div>
 
-      <WaveUpRight className="fill--off-white bg--transparent" />
+      <WaveUpRight className="fill--royal-blue flip-v bg--transparent" />
 
-      {sections.map((section, index) => {
-        const even = index % 2 === 0
-        return (
-          <>
-            {even ? (
-              index === 0 ? null : (
-                <WaveUpRight className="fill--off-white bg--transparent" />
-              )
-            ) : (
-              <WaveUpRight className="fill--white bg--off-white flip-h" />
-            )}
-            <div
-              className={`${
-                even ? "bg--off-white" : "bg--white"
-              } pt130 pb150 pv50--sm mt5--neg`}
-            >
+      <div className="container--only-lg mt50--neg--sm">
+        <div className="row flex-ai--fs flex-ai--c--sm">
+          {sections.map((section, index) => {
+            const odd = index % 2 !== 0
+            return (
               <div
-                className={`container--narrow center--sm ${
-                  even ? "color--black" : "color--black"
-                }`}
+                className={`${
+                  odd ? "bg--off-white--sm" : ""
+                } bg--transparent w100p pt130 pb150 pv80--sm`}
               >
-                <h2 className="color--dark-purple">{section.title}</h2>
-                <p className="font-p2">{section.text}</p>
-                {section.cta ? (
-                  <div className="mt40">
-                    <h4>{section.cta.title}</h4>
-                    <p className="font-p2">{section.cta.text}</p>
-                  </div>
-                ) : null}
+                <div className={`container--narrow center--sm color--black`}>
+                  <h2 className="color--dark-purple pb20">{section.title}</h2>
+                  {section.text.split("\n").map((t, i) => (
+                    <p className="font-p2" key={i}>
+                      {t}
+                    </p>
+                  ))}
+
+                  {section.cta && section.cta.live ? (
+                    <a className="mt40 flex flex-col flex-ai--c--sm" href="#">
+                      <h4>{section.cta.title}</h4>
+                      <p className="font-p2">{section.cta.text}</p>
+                      <RightArrow className="fill--dark-purple" />
+                    </a>
+                  ) : null}
+                </div>
               </div>
-            </div>
-          </>
-        )
-      })}
+            )
+          })}
+        </div>
+      </div>
     </div>
   )
 }

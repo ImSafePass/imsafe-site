@@ -22,6 +22,20 @@
   background: linear-gradient(180deg, $color-off-white 0%, $color-white 100%);
 }
 
+@media only screen and (max-width: $breakpoint-desk) {
+  .bg--off-white--sm {
+    background-color: $color-off-white;
+  }
+
+  .bg--white--sm {
+    background-color: $color-white;
+  }
+
+  .bg--transparent--sm {
+    background-color: transparent;
+  }
+}
+
 .color--black {
   color: $color-black;
 }
@@ -58,4 +72,7 @@ svg.fill--royal-blue path {
 }
 svg.fill--off-white path {
   fill: $color-off-white;
+}
+svg.fill--dark-purple path {
+  fill: $color-dark-purple;
 }

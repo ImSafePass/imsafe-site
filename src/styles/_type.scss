@@ -67,3 +67,7 @@ a {
 p.p2 {
   @include p2;
 }
+
+a {
+  color: $color-dark-purple;
+}
