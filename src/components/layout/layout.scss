@@ -49,13 +49,13 @@ main.page > div {
 }
 
 .link-menu {
-  a {
+  a:not(.btn) {
     border-bottom: 2px solid transparent;
     border-radius: 1px;
     padding-bottom: 1px;
   }
 
-  a.active {
+  a.active:not(.btn) {
     border-bottom-color: $color-white;
   }
 }
