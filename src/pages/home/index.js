@@ -10,6 +10,7 @@ import SEO from "@components/seo"
 import Button from "@components/button"
 import Alternators from "@components/alternators"
 import HomeSlide from "@components/home-slide"
+import Enter from "@components/Enter"
 
 import content from "@content/home-content"
 
@@ -102,7 +103,9 @@ const IndexPage = () => {
 
       <div className="bg--gradient--off-white-white">
         <div className="container--small pt80">
-          <Alternators alternators={sections} />
+          <Enter>
+            <Alternators alternators={sections} />
+          </Enter>
         </div>
       </div>
 
@@ -114,45 +117,48 @@ const IndexPage = () => {
       />
 
       <div className="row bg--gradient--off-white-white flex-col">
-        <div className="container--large pb100--sm">
-          <div className="relative">
-            <h4 className="color--dark-purple left mt20 mb20 flex-as--fs">
-              Potential applications
-            </h4>
-            <Carousel className="hidden-lg">{carouselSlides}</Carousel>
-            <div
-              className="home__horizontal-scroll flex flex-row flex-jc--fs mb100 hidden-sm"
-              style={{
-                minWidth: horizontalScrollLength,
-                transform: `translateX(-${slideXTransform}px)`,
-              }}
-            >
-              {slides}
-            </div>
-            {currentSlide > 0 ? (
-              <button
-                className="btn btn--royal-blue absolute hidden-sm carousel-nav"
-                style={{ bottom: 50, left: 50 }}
-                type="left-icon,royal-blue"
-                onClick={() => setCurrentSlide(currentSlide - 1)}
-              >
-                <ShortArrowLeft />
-              </button>
-            ) : null}
+        <Enter>
+          <div className="container--large pb100--sm">
+            <div className="relative">
+              <h4 className="color--dark-purple left mt20 mb20 flex-as--fs">
+                Potential applications
+              </h4>
+              <Carousel className="hidden-lg">{carouselSlides}</Carousel>
 
-            {/* Only show the button if we have more than two items left */}
-            {currentSlide >= slides.length - 1 ? null : (
-              <button
-                className="btn btn--royal-blue absolute hidden-sm carousel-nav"
-                style={{ bottom: 50, right: 50 }}
-                type="icon,royal-blue"
-                onClick={() => setCurrentSlide(currentSlide + 1)}
+              <div
+                className="home__horizontal-scroll flex flex-row flex-jc--fs mb100 hidden-sm"
+                style={{
+                  minWidth: horizontalScrollLength,
+                  transform: `translateX(-${slideXTransform}px)`,
+                }}
               >
-                <ShortArrowRight />
-              </button>
-            )}
+                {slides}
+              </div>
+              {currentSlide > 0 ? (
+                <button
+                  className="btn btn--royal-blue absolute hidden-sm carousel-nav"
+                  style={{ bottom: 50, left: 50 }}
+                  type="left-icon,royal-blue"
+                  onClick={() => setCurrentSlide(currentSlide - 1)}
+                >
+                  <ShortArrowLeft />
+                </button>
+              ) : null}
+
+              {/* Only show the button if we have more than two items left */}
+              {currentSlide >= slides.length - 1 ? null : (
+                <button
+                  className="btn btn--royal-blue absolute hidden-sm carousel-nav"
+                  style={{ bottom: 50, right: 50 }}
+                  type="icon,royal-blue"
+                  onClick={() => setCurrentSlide(currentSlide + 1)}
+                >
+                  <ShortArrowRight />
+                </button>
+              )}
+            </div>
           </div>
-        </div>
+        </Enter>
       </div>
     </div>
   )
