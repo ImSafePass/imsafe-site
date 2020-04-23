@@ -1,7 +1,9 @@
-module.exports = {
+import MissionCombinedTesting from "@images/mission-combined-testing.svg"
+import MissionWalkingOutside from "@images/mission-walking-outside.svg"
+
+export default {
   hero: {
-    title: `Our mission`,
-    subtitle: `Big security. Small tech. A solution custom-built to protect your civil liberties.`,
+    title: `Big security. Small tech. A solution custom-built to protect both you and your civil liberties.`,
   },
   paragraph: {
     title:
@@ -18,6 +20,7 @@ module.exports = {
       {
         title: `Lead with science and data`,
         text: `Though originally we focused on antibody-based immunity, we have expanded to make sure our algorithm also supports frequently tested non-infected individuals, helping both groups to establish confidence in their test results. Our approach to scoring employs Bayesian statistical analysis and joint probabilistic analysis to derive high-confidence predictive values that form the basis of our easily understandable score.`,
+        image: MissionCombinedTesting,
       },
       {
         title: `Accelerate safe re-entry`,
@@ -26,6 +29,7 @@ module.exports = {
       {
         title: `Pragmatically minimize restrictions and intrusions`,
         text: `Without this solution, we fear that businesses, states, and countries will reopen based on singular tests, not taking into account the significant and dangerous potential for test-error in both false-positives and false-negatives. We also fear leaders may insist on loosening critical civil liberties. This is why we've built our platform to be independent, consent-only, and are committed to keeping individuals' data in their hands.`,
+        image: MissionWalkingOutside,
       },
       {
         title: `Maximize security and privacy`,

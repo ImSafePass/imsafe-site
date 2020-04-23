@@ -16,7 +16,6 @@ const Mission = () => {
           <div className="row flex-col-r--sm">
             <div className="pl50--lg col-6 flex-col center--sm color--white">
               <h1>{hero.title}</h1>
-              <h5>{hero.subtitle}</h5>
             </div>
             <div className="col-6 mt50--neg--sm mb30--sm ml10--neg--sm mb20--sm">
               <WomanWithPhone className="mt20--lg mb20--sm mh20--lg w400 w300--sm" />
@@ -66,6 +65,9 @@ const Mission = () => {
                     <div
                       className={`container--narrow center--sm color--black`}
                     >
+                      {bullet.image ? (
+                        <bullet.image className="mb30 w100p" />
+                      ) : null}
                       <h3 className="color--dark-purple pb20">
                         {bullet.title}
                       </h3>

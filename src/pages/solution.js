@@ -47,8 +47,11 @@ const Solution = () => {
                     </p>
                   ))}
 
-                  {section.cta && section.cta.live ? (
-                    <a className="mt40 flex flex-col flex-ai--c--sm" href="#">
+                  {section.cta && section.cta.dest ? (
+                    <a
+                      className="mt40 flex flex-col flex-ai--c--sm"
+                      href={section.cta.dest}
+                    >
                       <h4>{section.cta.title}</h4>
                       <p className="font-p2">{section.cta.text}</p>
                       <RightArrow className="fill--dark-purple" />
