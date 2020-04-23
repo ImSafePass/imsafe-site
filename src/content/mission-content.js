@@ -3,7 +3,7 @@ import MissionWalkingOutside from "@images/mission-walking-outside.svg"
 
 export default {
   hero: {
-    title: `Big security. Small tech. A solution custom-built to protect both you and your civil liberties.`,
+    title: `Big security. Small tech.\nA solution custom-built to protect both you and your civil liberties.`,
   },
   paragraph: {
     title:
