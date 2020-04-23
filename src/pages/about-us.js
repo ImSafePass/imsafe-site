@@ -8,19 +8,26 @@ import { getAssets } from "@utils/getAssets"
 import LinkedinIcon from "@images/icons/linkedin.svg"
 
 const AboutUs = () => {
-  const { allFile } = useStaticQuery(graphql`
+  const { allImageSharp } = useStaticQuery(graphql`
     query AboutQuery {
-      allFile {
+      allImageSharp(filter: {}) {
         nodes {
-          publicURL
-          relativeDirectory
-          name
+          resize(jpegProgressive: true, jpegQuality: 8) {
+            src
+            originalName
+          }
         }
       }
     }
   `)
 
-  const assets = getAssets(allFile)
+  const images = allImageSharp.nodes.reduce(
+    (obj, n) => ({
+      ...obj,
+      [n.resize.originalName.split(".")[0]]: n.resize.src,
+    }),
+    {}
+  )
 
   return (
     <div className="page about">
@@ -73,7 +80,7 @@ const AboutUs = () => {
                     key={ind}
                   >
                     <img
-                      src={assets[member.imageName]}
+                      src={image[member.imageName]}
                       className="about-image mr10 ml15"
                       alt={member.name}
                     />
