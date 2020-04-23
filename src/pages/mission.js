@@ -11,10 +11,10 @@ const { hero, valueProps, paragraph } = content
 const Mission = () => {
   return (
     <div className="page mission">
-      <div className="bg--off-white pt50--lg">
+      <div className="bg--royal-blue pt50--lg">
         <div className="container--small pb70--sm pb30">
           <div className="row flex-col-r--sm">
-            <div className="pl50--lg col-6 flex-col center--sm">
+            <div className="pl50--lg col-6 flex-col center--sm color--white">
               <h1>{hero.title}</h1>
               <h5>{hero.subtitle}</h5>
             </div>
@@ -25,12 +25,12 @@ const Mission = () => {
         </div>
       </div>
 
-      <WaveUpRight className="fill--off-white flip-v bg--royal-blue mb10--neg" />
+      <WaveUpRight className="fill--royal-blue bg--off-white flip-v mb10--neg" />
 
-      <div className="bg--royal-blue color--white pt120 pt20--sm pb40">
+      <div className="bg--off-white pt120 pt20--sm pb40">
         <div className="container--small">
           <div className="row flex-col flex-ai--fs flex-ai--c--sm">
-            <h2 className="color--white mb20">{paragraph.title}</h2>
+            <h2 className="color--dark-purple mb20">{paragraph.title}</h2>
             {paragraph.text.split("\n").map((t, i) => (
               <p className="p2" key={i}>
                 {t}
@@ -40,7 +40,7 @@ const Mission = () => {
         </div>
       </div>
 
-      <WaveUpRight className="fill--royal-blue flip-h-v bg--transparent" />
+      <WaveUpRight className="fill--off-white flip-h-v bg--transparent" />
 
       {group(valueProps.bullets, 3).map((group, groupIndex) => (
         <div
@@ -66,10 +66,10 @@ const Mission = () => {
                     <div
                       className={`container--narrow center--sm color--black`}
                     >
-                      <h2 className="color--dark-purple pb20">
+                      <h3 className="color--dark-purple pb20">
                         {bullet.title}
-                      </h2>
-                      <p className="font-p2">{bullet.text}</p>
+                      </h3>
+                      <p className="p2">{bullet.text}</p>
                     </div>
                   </div>
                 )
