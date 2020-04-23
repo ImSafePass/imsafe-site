@@ -24,22 +24,7 @@ const Mission = () => {
         </div>
       </div>
 
-      <WaveUpRight className="fill--royal-blue bg--off-white flip-v mb10--neg" />
-
-      <div className="bg--off-white pt120 pt20--sm pb40">
-        <div className="container--small">
-          <div className="row flex-col flex-ai--fs flex-ai--c--sm">
-            <h2 className="color--dark-purple mb20">{paragraph.title}</h2>
-            {paragraph.text.split("\n").map((t, i) => (
-              <p className="p2" key={i}>
-                {t}
-              </p>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <WaveUpRight className="fill--off-white flip-h-v bg--transparent" />
+      <WaveUpRight className="fill--royal-blue bg--transparent flip-v mb10--neg" />
 
       {group(valueProps.bullets, 3).map((group, groupIndex) => (
         <div
@@ -60,7 +45,7 @@ const Mission = () => {
                     key={index}
                     className={`${
                       odd ? "bg--off-white--sm" : ""
-                    } bg--transparent w100p pt130 pb150 pv80--sm`}
+                    } bg--transparent w100p pv80`}
                   >
                     <div
                       className={`container--narrow center--sm color--black`}

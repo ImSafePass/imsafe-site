@@ -10,7 +10,7 @@ import SEO from "@components/seo"
 import Button from "@components/button"
 import Alternators from "@components/alternators"
 import HomeSlide from "@components/home-slide"
-import Enter from "@components/Enter"
+import Enter from "@components/enter"
 
 import content from "@content/home-content"
 
