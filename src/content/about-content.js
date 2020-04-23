@@ -25,7 +25,7 @@ export default {
       bio: `Is the Director of Engineering at a leading digital design-build firm, [Blink UX](https://blinkux.com), having run the web development curriculum and built the learning management system at [Bloc.io](https://bloc.io), a digital bootcamp.`,
       name: "Sasha Klein",
       linkedin: "https://www.linkedin.com/in/sasha-klein/",
-      imageName: "sasha2",
+      imageName: "sasha-2",
     },
   ],
   volunteers: [

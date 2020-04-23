@@ -12,7 +12,7 @@ const AboutUs = () => {
     query AboutQuery {
       allImageSharp(filter: {}) {
         nodes {
-          resize(jpegProgressive: true, jpegQuality: 10, height: 100) {
+          resize(jpegProgressive: true, height: 500) {
             src
             originalName
           }
@@ -29,6 +29,7 @@ const AboutUs = () => {
     {}
   )
 
+  console.log(images)
   return (
     <div className="page about">
       <div className="bg--royal-blue">
@@ -80,7 +81,7 @@ const AboutUs = () => {
                     key={ind}
                   >
                     <img
-                      src={image[member.imageName]}
+                      src={images[member.imageName]}
                       className="about-image mr10 ml15"
                       alt={member.name}
                     />
