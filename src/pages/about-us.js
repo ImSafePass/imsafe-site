@@ -12,7 +12,7 @@ const AboutUs = () => {
     query AboutQuery {
       allImageSharp(filter: {}) {
         nodes {
-          resize(jpegProgressive: true, jpegQuality: 8) {
+          resize(jpegProgressive: true, jpegQuality: 10, height: 100) {
             src
             originalName
           }
