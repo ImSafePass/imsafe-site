@@ -10,16 +10,14 @@ const ContactUs = () => {
           <div className="row flex-ai--fs flex-col--sm">
             <div className="flex flex-col flex-ai--fs color--black col-6 flex-jc--fs mb50">
               <h1 className="mt0 color--dark-purple">Leave us a note</h1>
-              <p className="p2">
+              <p>
                 We're committed to helping us out of this crisis while
                 respecting privacy and fundamental rights. As we scale up as
                 quickly as possible, we're forming a team of engineers,
                 designers, medical professionals, and contrarians, and we'd love
                 to hear from you!
               </p>
-              <p className="p2">
-                Have questions or concerns? Want to help? Let us know!
-              </p>
+              <p>Have questions or concerns? Want to help? Let us know!</p>
             </div>
             <div className="col-1"></div>
             <form

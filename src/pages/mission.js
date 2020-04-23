@@ -62,7 +62,7 @@ const Mission = () => {
                         <h3 className="color--dark-purple pb20">
                           {bullet.title}
                         </h3>
-                        <p className="p2">{bullet.text}</p>
+                        <p>{bullet.text}</p>
                       </div>
                     </div>
                   </Enter>

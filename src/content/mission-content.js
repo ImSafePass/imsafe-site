@@ -2,9 +2,7 @@ import MissionCombinedTesting from "@images/mission-combined-testing.svg"
 import MissionWalkingOutside from "@images/mission-walking-outside.svg"
 
 export default {
-  hero: {
-    title: `Big security. Small tech.\nA solution custom-built to protect both you and your civil liberties.`,
-  },
+  // hero in HTML
   paragraph: {
     title:
       "Safely return to normal without giving up our private, personal information.",

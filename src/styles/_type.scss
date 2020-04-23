@@ -64,10 +64,14 @@ a {
   }
 }
 
-p.p2 {
-  @include p2;
-}
-
 a {
   color: $color-dark-purple;
+}
+
+p + p {
+  margin-top: 0px;
+}
+
+.bold {
+  font-weight: bold;
 }

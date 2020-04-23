@@ -44,9 +44,7 @@ const Solution = () => {
                     ) : null}
                     <h2 className="color--dark-purple pb20">{section.title}</h2>
                     {section.text.split("\n").map((t, i) => (
-                      <p className="font-p2" key={i}>
-                        {t}
-                      </p>
+                      <p key={i}>{t}</p>
                     ))}
 
                     {section.cta && section.cta.dest ? (
@@ -55,7 +53,7 @@ const Solution = () => {
                         href={section.cta.dest}
                       >
                         <h4>{section.cta.title}</h4>
-                        <p className="font-p2">{section.cta.text}</p>
+                        <p>{section.cta.text}</p>
                         <RightArrow className="fill--dark-purple" />
                       </a>
                     ) : null}

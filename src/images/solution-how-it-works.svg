@@ -1,5 +1,5 @@
 <svg width="1694" height="837" viewBox="0 0 1694 837" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M79.9999 800.678C260 957.679 847.268 550.483 847.268 550.483L847.268 298.873C847.268 298.873 250 -144.32 80 48.6779C-90 241.676 79.9999 424.678 79.9999 424.678C79.9999 424.678 -100 643.677 79.9999 800.678Z" fill="url(#paint0_linear)"/>
+<path d="M79.9999 800.678C260 957.679 847.268 550.483 847.268 550.483L847.268 298.873C847.268 298.873 250 -144.32 80 48.6779C-90 241.676 79.9999 424.678 79.9999 424.678C79.9999 424.678 -100 643.677 79.9999 800.678Z" fill="url(#paint0_linear-howitworks)"/>
 <path d="M1613.27 800.678C1433.27 957.68 846 550.483 846 550.483L846 298.873C846 298.873 1443.27 -144.32 1613.27 48.678C1783.27 241.676 1613.27 424.678 1613.27 424.678C1613.27 424.678 1793.27 643.677 1613.27 800.678Z" fill="url(#paint1_linear)"/>
 <g filter="url(#filter0_d-howitworks)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M846.979 299.012L752.001 335.241V379.303H752.001V447.783C752.001 486.983 794.112 515.365 835.305 543.128C839.17 545.733 843.026 548.333 846.84 550.935C850.653 548.333 854.51 545.733 858.375 543.128C899.567 515.365 941.678 486.983 941.678 447.783V379.303H941.958V335.241L846.979 299.012Z" fill="#3341C0"/>
@@ -422,7 +422,7 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 </filter>
-<linearGradient id="paint0_linear" x1="857.268" y1="418.69" x2="101.268" y2="406.69" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear-howitworks" x1="857.268" y1="418.69" x2="101.268" y2="406.69" gradientUnits="userSpaceOnUse">
 <stop stop-color="#B6BCF1"/>
 <stop offset="1" stop-color="#EAF2FA" stop-opacity="0"/>
 </linearGradient>
