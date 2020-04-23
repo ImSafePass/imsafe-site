@@ -9,6 +9,7 @@ import LinkFooter from "../link-footer"
 import "./layout.scss"
 
 const menuItems = [
+  { to: "/", text: "Home" },
   { to: "/solution", text: "Our Solution" },
   { to: "/mission", text: "Our Mission" },
   // { to: "/about", text: "About" },
@@ -43,18 +44,15 @@ const Layout = ({ children }) => {
     },
   } = data
 
-  const menuItemsIncludingHome = [{ to: "/", text: "Home" }, ...menuItems]
   return (
     <Location>
       {({ location }) => {
-        const currentPageIndex = menuItemsIncludingHome.findIndex(
+        const currentPageIndex = menuItems.findIndex(
           p => p.to === location.pathname
         )
         const nextPage =
-          menuItemsIncludingHome[
-            currentPageIndex === menuItemsIncludingHome.length - 1
-              ? 0
-              : currentPageIndex + 1
+          menuItems[
+            currentPageIndex === menuItems.length - 1 ? 0 : currentPageIndex + 1
           ]
 
         return (

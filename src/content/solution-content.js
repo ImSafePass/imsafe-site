@@ -1,8 +1,9 @@
-module.exports = {
+import SolutionDoctorGraph from "@images/solution-doctor-graph.svg"
+
+const solutionContent = {
   hero: {
-    title: "Our Solution",
-    subtitle:
-      "A secure, private, digital immunological record that allows us to get to a new normal faster.",
+    title:
+      "A secure, private, digital immune record to get us all to new normal, faster.",
     imgSrc: "solutionManPhone",
   },
   sections: [
@@ -16,6 +17,7 @@ module.exports = {
       },
     },
     {
+      image: SolutionDoctorGraph,
       title: "A combined measure that goes beyond single tests.",
       text: `As laboratory and at-home tests become more broadly available, both antibody and active infection tests will provide critical information — but individual tests fall short.\nIt takes more than a single test to confidently determine an individual’s immunity to Covid-19, or for that matter, that they are virus-free. Even in ideal circumstances, the margin of error is too great for any one test result to be safely deemed decisive. We combine and analyze multiple tests and broader community data points to arrive at a single, high-confidence score that is easy to understand and communicate.`,
       cta: {
@@ -37,3 +39,5 @@ module.exports = {
     },
   ],
 }
+
+export default solutionContent

@@ -153,16 +153,6 @@ const IndexPage = () => {
             )}
           </div>
         </div>
-
-        <div className="container--large pb150 hidden-sm">
-          <h4 className="left color--dark-purple">How it works</h4>
-          <img
-            src={assets.homeDiagram}
-            width="108%"
-            style={{ marginLeft: "-5%" }}
-            alt="Diagram: Variety of data inputs (labs, wearables, etc) and variety of outputs (nursing homes, employers, etc)."
-          />
-        </div>
       </div>
     </div>
   )

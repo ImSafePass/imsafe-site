@@ -139,6 +139,16 @@
       margin-right: -#{$spacerVal}px;
     }
 
+    .mv#{$spacerVal}--neg--sm {
+      margin-bottom: -#{$spacerVal}px;
+      margin-top: -#{$spacerVal}px;
+    }
+
+    .mh#{$spacerVal}--neg--sm {
+      margin-left: -#{$spacerVal}px;
+      margin-right: -#{$spacerVal}px;
+    }
+
     .h#{$heightVal}--sm {
       height: #{$heightVal}px;
     }

@@ -3,7 +3,7 @@ import React from "react"
 import WaveUpRight from "@images/waves/wave-up-right.svg"
 import ManWithPhone from "@images/solution-man-phone.svg"
 import RightArrow from "@images/icons/right-arrow.svg"
-
+import HowItWorks from "@images/solution-how-it-works.svg"
 import content from "@content/solution-content"
 
 const { hero, sections } = content
@@ -16,7 +16,6 @@ const Solution = () => {
           <div className="row flex-col-r--sm">
             <div className="pl50--lg col-6 flex-col center--sm color--white">
               <h1>{hero.title}</h1>
-              <h5>{hero.subtitle}</h5>
             </div>
             <div className="col-6 mt120--neg--sm mb30--neg--sm ml10--neg--sm mb20--sm">
               <ManWithPhone className="mb20--sm mh20--lg w400 w350--sm" />
@@ -38,6 +37,9 @@ const Solution = () => {
                 } bg--transparent w100p pt130 pb150 pv80--sm`}
               >
                 <div className={`container--narrow center--sm color--black`}>
+                  {section.image ? (
+                    <section.image className="mb30 w100p" />
+                  ) : null}
                   <h2 className="color--dark-purple pb20">{section.title}</h2>
                   {section.text.split("\n").map((t, i) => (
                     <p className="font-p2" key={i}>
@@ -57,6 +59,16 @@ const Solution = () => {
             )
           })}
         </div>
+      </div>
+
+      <div className="bg--off-white pt50">
+        <div className="container--narow">
+          <h2 className="mb50 color--dark-purple center--sm">How it works</h2>
+        </div>
+        <HowItWorks
+          className="mb50 mt200--neg--sm mb150--neg--sm"
+          style={{ width: "120%", marginLeft: "-10%" }}
+        />
       </div>
     </div>
   )
