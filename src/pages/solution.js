@@ -15,11 +15,11 @@ const Solution = () => {
       <div className="bg--royal-blue">
         <div className="container--small pb70--sm pb30">
           <div className="row flex-col-r--sm">
-            <div className="pl50--lg col-6 flex-col center--sm color--white">
+            <div className="pl50--lg col-7 flex-col center--sm color--white">
               <h1>{hero.title}</h1>
             </div>
-            <div className="col-6 mt120--neg--sm mb30--neg--sm ml10--neg--sm mb20--sm">
-              <ManWithPhone className="mb20--sm mh20--lg w400 w350--sm" />
+            <div className="col-5 mt120--neg--sm mb30--neg--sm ml10--neg--sm mb20--sm">
+              <ManWithPhone className="mb20--sm w400 w350--sm" />
             </div>
           </div>
         </div>
