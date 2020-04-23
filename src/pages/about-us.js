@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import Markdown from "react-markdown"
 
 import WaveUpRight from "@images/waves/wave-up-right.svg"
 import content from "@content/about-content"
@@ -63,21 +64,26 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
-            <div className="col-6 pl80--lg flex-col flex-jc--fs bg--off-white--sm">
-              <div className="our-team container--narrow pv60--sm">
+            <div className="col-6 pl80--lg flex-col flex-jc--fs bg--off-white--sm flex-ai--c--sm">
+              <div className="our-team container--narrow pv60--sm flex-ai--c--sm flex flex-col">
                 <h2 className="color--dark-purple mb40">Our team</h2>
                 {content.team.map((member, ind) => (
                   <div
-                    className="member flex flex-row flex-jc--sb flex-ai--fs flex-col--sm flex-ai--c--sm"
+                    className="member flex flex-row flex-jc--sb flex-ai--fs flex-col--sm flex-ai--c--sm mb40--sm"
                     key={ind}
                   >
-                    <img src={assets[member.imageName]} className="mr10 ml15" />
+                    <img
+                      src={assets[member.imageName]}
+                      className="about-image mr10 ml15"
+                      alt={member.name}
+                    />
                     <div className="flex-col flex-jc--fs pl20--lg">
-                      <div>
+                      <div className="flex flex-row flex-col--sm flex-ai--c--sm mt20--sm">
                         <a
                           className="color--royal-blue flex flex-row flex-jc--fs flex-ai--c"
                           href={member.linkedin}
                           target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <h3>{member.name}</h3>
                           <LinkedinIcon
@@ -86,12 +92,12 @@ const AboutUs = () => {
                           ></LinkedinIcon>
                         </a>
                       </div>
-                      <p>{member.bio}</p>
+                      <Markdown className="markdown" source={member.bio} />
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="container--narow pv60">
+              <div className="container--narow pv60 pt0--sm">
                 <h2 className="color--dark-purple">Special thanks</h2>
                 <p>
                   ImSafe is a team effort, and we want to thank the following
@@ -100,7 +106,11 @@ const AboutUs = () => {
                 <ul>
                   {content.volunteers.map(v => (
                     <li key={v.name}>
-                      <Link to={v.link} target="_blank">
+                      <Link
+                        to={v.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {v.name}
                       </Link>
                     </li>

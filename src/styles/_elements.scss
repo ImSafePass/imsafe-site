@@ -59,3 +59,18 @@ textarea {
 .flip-v-h {
   transform: scale(-1, -1);
 }
+
+.about-image {
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+
+.markdown {
+  a {
+    color: $color-dark-purple;
+    font-weight: bold;
+  }
+}
