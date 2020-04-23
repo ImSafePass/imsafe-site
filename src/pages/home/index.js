@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import ShortArrowRight from "@images/icons/short-right-arrow.svg"
 import ShortArrowLeft from "@images/icons/short-arrow-left.svg"
 import WaveUpRight from "@images/waves/wave-up-right.svg"
+import Doctor from "@images/home-hero-ill.svg"
 
 import Carousel from "@components/carousel"
 import { getAssets } from "@utils/getAssets"
@@ -62,15 +63,11 @@ const IndexPage = () => {
   return (
     <div className="home page">
       <SEO />
-      <div className="bg--royal-blue">
+      <div className="bg--royal-blue pt60--sm">
         <div className="container--small mt80--neg--sm">
           <div className="row">
             <div className="col-4">
-              <img
-                alt={hero.title}
-                src={assets[hero.imgSrc]}
-                className="mt20 mh20 mr0--sm ml40--sm w325 w250--sm"
-              />
+              <Doctor className="mt20 mh20 mr0--sm ml40--sm w325 w250--sm" />
             </div>
             <div className="flex-col col-8 color--white center--sm left row">
               <h1>{hero.title}</h1>

@@ -16,19 +16,23 @@ export default {
     "We’re eager to continue refining, validating, and evangelizing our approach. If you believe your expertise is a good fit for what we are building, please contact us.",
   team: [
     {
-      bio: `Niko is a veteran of the impact investment industry, having been the first employee, Director, and Head of Research at Imprint Capital Advisors ([purchased by Goldman Sachs](https://www.gsam.com/content/gsam/us/en/institutions/strategies/explore-by-solution/esg-and-impact-investing.html); now its impact and sustainable finance platform). He went on to found an independent impact-focused investment advisory, [Cirsia](http://cirsia.com/), which serves large institutions and ultra-high-net-worth families. Niko spent 10 years on the board of the Sunlight Foundation, a government transparency watchdog and gov-technology innovator. He leads ImSafe’s strategy, finance and partner development.`,
+      bio: `Niko is a veteran of the impact investment industry, having been the first employee, Director, and Head of Research at Imprint Capital Advisors ([purchased by Goldman Sachs](https://www.gsam.com/content/gsam/us/en/institutions/strategies/explore-by-solution/esg-and-impact-investing.html); now its impact and sustainable finance platform). He went on to found an independent impact-focused investment advisory, [Cirsia](http://cirsia.com/), which serves large institutions and ultra-high-net-worth families. Niko spent 10 years on the board of the [Sunlight Foundation](https://sunlightfoundation.com/), a government transparency watchdog and gov-technology innovator. He leads ImSafe’s strategy, finance and partner development.`,
       name: "Niko Klein",
       linkedin: "https://www.linkedin.com/in/nikoklein/",
       imageName: "niko",
     },
     {
-      bio: `Is the Director of Engineering at a leading digital design-build firm, [Blink UX](https://blinkux.com), having run the web development curriculum and built the learning management system at [Bloc.io](https://bloc.io), a digital bootcamp.`,
+      bio: `Sasha is the Director of Engineering at [Blink UX](https://blinkux.com), a leading digital design-build firm, and led engineering at [Redshift Digital](https://redshiftdigital.com/) before that. At both, Sasha architected and built a range of applications for both smaller startups and large tech companies. Before joining agency life, he ran the web development curriculum and built the learning management system at [Bloc.io](https://bloc.io), a digital engineering bootcamp.`,
       name: "Sasha Klein",
       linkedin: "https://www.linkedin.com/in/sasha-klein/",
       imageName: "sasha-2",
     },
   ],
   volunteers: [
+    {
+      name: "Sepehr Sadighpour",
+      link: "https://www.linkedin.com/in/sepehrs/",
+    },
     {
       name: "Sara Keats",
       link: "https://www.linkedin.com/in/sarakeats/",

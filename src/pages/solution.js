@@ -13,12 +13,12 @@ const Solution = () => {
   return (
     <div className="page solution">
       <div className="bg--royal-blue">
-        <div className="container--small pb70--sm pb30">
+        <div className="container--small pb70--sm pb30 mt40--neg--lg mb20--neg--lg">
           <div className="row flex-col-r--sm">
             <div className="pl50--lg col-7 flex-col center--sm color--white">
               <h1>{hero.title}</h1>
             </div>
-            <div className="col-5 mt120--neg--sm mb30--neg--sm ml10--neg--sm mb20--sm">
+            <div className="col-5 mt40--neg--sm mb30--neg--sm ml30--neg--sm mb20--sm">
               <ManWithPhone className="mb20--sm w400 w350--sm" />
             </div>
           </div>
@@ -36,7 +36,7 @@ const Solution = () => {
                 <div
                   className={`${
                     odd ? "bg--off-white--sm" : ""
-                  } bg--transparent w100p pv80`}
+                  } bg--transparent w100p pv80 pv60--sm`}
                 >
                   <div className={`container--narrow center--sm color--black`}>
                     {section.image ? (

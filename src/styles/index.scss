@@ -16,11 +16,6 @@
   padding-top: 20px;
 }
 
-.page.solution > div:first-child,
-.page.mission > div:first-child,
-.page.home > div:first-child,
-.page.about > div:first-child {
-  @media only screen and (min-width: $breakpoint-desk) {
-    padding-top: 30px;
-  }
+.page.contact > div:first-child {
+  padding-top: $header-height;
 }

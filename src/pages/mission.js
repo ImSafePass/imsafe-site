@@ -12,9 +12,9 @@ const { valueProps } = content
 const Mission = () => {
   return (
     <div className="page mission">
-      <div className="bg--royal-blue">
-        <div className="container--small pb70--sm pb30">
-          <div className="row flex-col-r--sm">
+      <div className="bg--royal-blue pt20">
+        <div className="container--small pb40--sm">
+          <div className="row flex-col-r--sm mt70--neg--lg">
             <div className="pl50--lg col-7 flex-col center--sm color--white">
               <h1>
                 Big security. Small tech.
@@ -22,14 +22,14 @@ const Mission = () => {
                 liberties.
               </h1>
             </div>
-            <div className="col-5 mt50--neg--sm mb30--sm ml10--neg--sm mb20--sm">
-              <WomanWithPhone className="mt20--lg mb20--sm ml50--lg w350 w300--sm" />
+            <div className="col-5 pt20--lg mb20--sm ml10--neg--sm">
+              <WomanWithPhone className="mt40--lg ml50--lg w275 w225--sm mv30--neg--sm" />
             </div>
           </div>
         </div>
       </div>
 
-      <WaveUpRight className="fill--royal-blue bg--transparent flip-v mb10--neg" />
+      <WaveUpRight className="fill--royal-blue bg--transparent flip-v mb10--neg mt20--neg" />
 
       {group(valueProps.bullets, 3).map((group, groupIndex) => (
         <div
@@ -51,7 +51,7 @@ const Mission = () => {
                       key={index}
                       className={`${
                         odd ? "bg--off-white--sm" : ""
-                      } bg--transparent w100p pv80`}
+                      } bg--transparent w100p pv80 pv60--sm`}
                     >
                       <div
                         className={`container--narrow center--sm color--black`}
