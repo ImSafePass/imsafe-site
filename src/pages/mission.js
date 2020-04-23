@@ -5,20 +5,25 @@ import WomanWithPhone from "@images/mission-walking-phone.svg"
 
 import { group } from "@utils/array"
 import content from "@content/mission-content"
+import Enter from "@components/enter"
 
-const { hero, valueProps, paragraph } = content
+const { valueProps } = content
 
 const Mission = () => {
   return (
     <div className="page mission">
-      <div className="bg--royal-blue pt50--lg">
+      <div className="bg--royal-blue">
         <div className="container--small pb70--sm pb30">
           <div className="row flex-col-r--sm">
-            <div className="pl50--lg col-6 flex-col center--sm color--white">
-              <h1>{hero.title}</h1>
+            <div className="pl50--lg col-7 flex-col center--sm color--white">
+              <h1>
+                Big security. Small tech.
+                <br />A solution custom-built to protect both you and your civil
+                liberties.
+              </h1>
             </div>
-            <div className="col-6 mt50--neg--sm mb30--sm ml10--neg--sm mb20--sm">
-              <WomanWithPhone className="mt20--lg mb20--sm mh20--lg w400 w300--sm" />
+            <div className="col-5 mt50--neg--sm mb30--sm ml10--neg--sm mb20--sm">
+              <WomanWithPhone className="mt20--lg mb20--sm ml50--lg w350 w300--sm" />
             </div>
           </div>
         </div>
@@ -41,24 +46,26 @@ const Mission = () => {
               {group.map((bullet, index) => {
                 const odd = (index + groupIndex) % 2 !== 0
                 return (
-                  <div
-                    key={index}
-                    className={`${
-                      odd ? "bg--off-white--sm" : ""
-                    } bg--transparent w100p pv80`}
-                  >
+                  <Enter delay={index * 150}>
                     <div
-                      className={`container--narrow center--sm color--black`}
+                      key={index}
+                      className={`${
+                        odd ? "bg--off-white--sm" : ""
+                      } bg--transparent w100p pv80`}
                     >
-                      {bullet.image ? (
-                        <bullet.image className="mb30 w100p" />
-                      ) : null}
-                      <h3 className="color--dark-purple pb20">
-                        {bullet.title}
-                      </h3>
-                      <p className="p2">{bullet.text}</p>
+                      <div
+                        className={`container--narrow center--sm color--black`}
+                      >
+                        {bullet.image ? (
+                          <bullet.image className="mb30 w100p" />
+                        ) : null}
+                        <h3 className="color--dark-purple pb20">
+                          {bullet.title}
+                        </h3>
+                        <p className="p2">{bullet.text}</p>
+                      </div>
                     </div>
-                  </div>
+                  </Enter>
                 )
               })}
             </div>

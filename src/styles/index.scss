@@ -12,7 +12,9 @@
   display: none;
 }
 
-.page.solution > div:first-child {
+.page.solution > div:first-child,
+.page.mission > div:first-child,
+.page.home > div:first-child {
   @media only screen and (min-width: $breakpoint-desk) {
     padding-top: 30px;
   }

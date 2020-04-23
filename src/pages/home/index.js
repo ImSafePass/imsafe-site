@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import ShortArrowRight from "@images/icons/short-right-arrow.svg"
 import ShortArrowLeft from "@images/icons/short-arrow-left.svg"
+import WaveUpRight from "@images/waves/wave-up-right.svg"
 
 import Carousel from "@components/carousel"
 import { getAssets } from "@utils/getAssets"
@@ -79,16 +80,11 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <img
-        src={assets.waveDownLeft}
-        alt=""
-        className="bg--transparent w100p pt40--sm"
-        style={{ marginTop: "-15vw" }}
-      />
+      <WaveUpRight className="fill--royal-blue bg--transparent flip-v-h mb10--neg" />
 
       <div className="bg--white">
         <div className="container--large">
-          <div className="row color--dark-purple mv60 flex-jc--c mb30--sm">
+          <div className="row color--dark-purple mv60 flex-jc--c mb10--sm">
             <h4 className="center--sm">{cta.text}</h4>
             <Button
               to={cta.dest}
