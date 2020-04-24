@@ -69,7 +69,7 @@ const AboutUs = () => {
                   We’re eager to continue refining, validating, and evangelizing
                   our approach. If you believe your expertise is a good fit for
                   what we are building, please{" "}
-                  <Link className="color--dark-purple bold" to="/contact-us">
+                  <Link className="color--dark-purple bold" to="/contact-us/">
                     contact us.
                   </Link>
                 </p>

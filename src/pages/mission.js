@@ -18,8 +18,7 @@ const Mission = () => {
           <div className="row flex-col-r--sm mt70--neg--lg">
             <div className="pl50--lg col-7 flex-col center--sm color--white">
               <h1>
-                Big security. Small tech.
-                <br />A solution custom-built to protect both you and your civil
+                A solution custom-built to protect both you and your civil
                 liberties.
               </h1>
             </div>
