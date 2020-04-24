@@ -10,10 +10,10 @@ import "./layout.scss"
 
 const menuItems = [
   { to: "/", text: "Home" },
-  { to: "/solution", text: "Our Solution" },
-  { to: "/mission", text: "Our Mission" },
-  // { to: "/about", text: "About" },
-  { to: "/contact-us", text: "Contact Us" },
+  { to: "/solution/", text: "Our Solution" },
+  { to: "/mission/", text: "Our Mission" },
+  { to: "/about-us/", text: "About Us" },
+  { to: "/contact-us/", text: "Contact Us" },
 ]
 
 const Layout = ({ children }) => {

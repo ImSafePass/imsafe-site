@@ -15,7 +15,7 @@ This repo contains all the code/content for the frontend website for ImSafe Pass
 
    The site deploys to Netlify.
 
-   [![Netlify Status](https://api.netlify.com/api/v1/badges/e6f6a610-c312-4b27-aa6f-2f0807b40044/deploy-status)](https://app.netlify.com/sites/imsafepass/deploys)
+   [![Netlify Status](https://api.netlify.com/api/v1/badges/4e134c4c-a5a3-4220-9858-c83436225bf9/deploy-status)](https://app.netlify.com/sites/imsafe-site/deploys)
 
    Push to the `master` branch to auto-deploy to Netlify. All pull requests automatically deploy a demo branch. It's a best practice to PR and preview code live before merging it into master/production.
 

@@ -234,6 +234,12 @@
   width: 100%;
 }
 
+.w101p {
+  width: 101vw;
+  margin-left: -0.5vw;
+  margin-top: -7px;
+}
+
 .w100p--sm {
   @media only screen and (max-width: $breakpoint-desk) {
     width: 100%;

@@ -1,12 +1,11 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import ShortArrowRight from "@images/icons/short-right-arrow.svg"
 import ShortArrowLeft from "@images/icons/short-arrow-left.svg"
-import WaveUpRight from "@images/waves/wave-up-right.svg"
+import Doctor from "@images/home-hero-ill.svg"
 
 import Carousel from "@components/carousel"
-import { getAssets } from "@utils/getAssets"
+import { useAssets } from "@utils/getAssets"
 import SEO from "@components/seo"
 import Button from "@components/button"
 import Alternators from "@components/alternators"
@@ -20,20 +19,9 @@ import "./home.scss"
 const { hero, cta, sections, applications } = content
 
 const IndexPage = () => {
-  const { allFile } = useStaticQuery(graphql`
-    query HomeQuery {
-      allFile {
-        nodes {
-          publicURL
-          relativeDirectory
-          name
-        }
-      }
-    }
-  `)
+  const assets = useAssets()
 
   const [currentSlide, setCurrentSlide] = useState(0)
-  const assets = getAssets(allFile)
 
   const slidePaddingLeft = 120
   const slideSize = 500
@@ -62,15 +50,11 @@ const IndexPage = () => {
   return (
     <div className="home page">
       <SEO />
-      <div className="bg--royal-blue">
+      <div className="bg--royal-blue pt60--sm">
         <div className="container--small mt80--neg--sm">
           <div className="row">
             <div className="col-4">
-              <img
-                alt={hero.title}
-                src={assets[hero.imgSrc]}
-                className="mt20 mh20 mr0--sm ml40--sm w325 w250--sm"
-              />
+              <Doctor className="mt20 mh20 mr0--sm ml40--sm w325 w250--sm" />
             </div>
             <div className="flex-col col-8 color--white center--sm left row">
               <h1>{hero.title}</h1>
@@ -80,7 +64,11 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <WaveUpRight className="fill--royal-blue bg--transparent flip-v-h mb10--neg" />
+      <img
+        alt=""
+        src={assets.waveUpRightBlue}
+        className="w101p bg--royal-blue bg--transparent flip-v-h mb10--neg"
+      />
 
       <div className="bg--white">
         <div className="container--large">
