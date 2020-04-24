@@ -2,12 +2,12 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Markdown from "react-markdown"
 
-import WaveUpRight from "@images/waves/wave-up-right.svg"
 import content from "@content/about-content"
-import { getAssets } from "@utils/getAssets"
+import { useAssets } from "@utils/getAssets"
 import LinkedinIcon from "@images/icons/linkedin.svg"
 
 const AboutUs = () => {
+  const assets = useAssets()
   const { allImageSharp } = useStaticQuery(graphql`
     query AboutQuery {
       allImageSharp(filter: {}) {
@@ -29,7 +29,6 @@ const AboutUs = () => {
     {}
   )
 
-  console.log(images)
   return (
     <div className="page about">
       <div className="bg--royal-blue">
@@ -45,7 +44,11 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <WaveUpRight className="fill--royal-blue bg--transparent flip-v mb10--neg" />
+      <img
+        alt=""
+        src={assets.waveUpRightBlue}
+        className="w101p bg--royal-blue bg--transparent flip-v mb10--neg"
+      />
 
       <div className="bg--white">
         <div className="container--only-lg pb100--lg pt50--lg">

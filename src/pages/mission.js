@@ -1,15 +1,16 @@
 import React from "react"
 
-import WaveUpRight from "@images/waves/wave-up-right.svg"
 import WomanWithPhone from "@images/mission-walking-phone.svg"
 
 import { group } from "@utils/array"
 import content from "@content/mission-content"
 import Enter from "@components/enter"
+import { useAssets } from "@utils/getAssets"
 
 const { valueProps } = content
 
 const Mission = () => {
+  const assets = useAssets()
   return (
     <div className="page mission">
       <div className="bg--royal-blue pt20">
@@ -29,7 +30,11 @@ const Mission = () => {
         </div>
       </div>
 
-      <WaveUpRight className="fill--royal-blue bg--transparent flip-v mb10--neg mt20--neg" />
+      <img
+        alt=""
+        src={assets.waveUpRightBlue}
+        className="w101p bg--transparent flip-v mt20--neg"
+      />
 
       {group(valueProps.bullets, 3).map((group, groupIndex) => (
         <div
@@ -56,13 +61,16 @@ const Mission = () => {
                       <div
                         className={`container--narrow center--sm color--black`}
                       >
-                        {bullet.image ? (
+                        {bullet.image && bullet.imageLocation !== "bottom" ? (
                           <bullet.image className="mb30 w100p" />
                         ) : null}
                         <h3 className="color--dark-purple pb20">
                           {bullet.title}
                         </h3>
                         <p>{bullet.text}</p>
+                        {bullet.image && bullet.imageLocation === "bottom" ? (
+                          <bullet.image className="mt30 w100p" />
+                        ) : null}
                       </div>
                     </div>
                   </Enter>

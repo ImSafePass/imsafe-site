@@ -2,8 +2,7 @@ import AboutGroup from "@images/about-group.svg"
 
 export default {
   hero: {
-    title:
-      "We founded ImSafe because we believe your immune health should be in your hands.",
+    title: "We we believe your immune health should be in your hands.",
     image: AboutGroup,
   },
   ourStory: [

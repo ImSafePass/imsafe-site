@@ -1,5 +1,6 @@
 import MissionCombinedTesting from "@images/mission-combined-testing.svg"
 import MissionWalkingOutside from "@images/mission-walking-outside.svg"
+import MissionIndividuals from "@images/mission-individuals.svg"
 
 export default {
   // hero in HTML
@@ -14,6 +15,8 @@ export default {
       {
         title: `Empower individuals`,
         text: `ImSafe is designed around individuals. Our goal is to allow each individual Pass holder to understand their own safety profile and demonstrate their own safety through the platform. Unlike location-tracking, contact-tracing, and other top-down surveillance programs, ImSafe uses individual data, not group-associations or proxies, to clear our users of unnecessary restrictions.`,
+        image: MissionIndividuals,
+        imageLocation: "bottom",
       },
       {
         title: `Lead with science and data`,
@@ -27,11 +30,11 @@ export default {
       {
         title: `Pragmatically minimize restrictions and intrusions`,
         text: `Without this solution, we fear that businesses, states, and countries will reopen based on singular tests, not taking into account the significant and dangerous potential for test-error in both false-positives and false-negatives. We also fear leaders may insist on loosening critical civil liberties. This is why we've built our platform to be independent, consent-only, and are committed to keeping individuals' data in their hands.`,
-        image: MissionWalkingOutside,
       },
       {
         title: `Maximize security and privacy`,
         text: `We protect user data with the best in digital security, in line with both HIPAA and GDPR best practices. Our security measures cover personal identifying information, test results, and score data. All records are encrypted at rest and in transit. User-identifying data is structurally segregated from test records, and the APIs for accessing the two are separated and incapable of bulk record collection. All non-API access to data is heavily authenticated and logged. Data access through individually approved sharing is extended only to authenticated parties.`,
+        image: MissionWalkingOutside,
       },
       {
         title: `Earn trust through transparency`,
