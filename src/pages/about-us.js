@@ -55,7 +55,7 @@ const AboutUs = () => {
           <div className="row flex-col--sm flex-ai--fs">
             <div className="col-6 flex-col flex-jc--fs flex">
               <div className="our-story container--narrow">
-                <h2 className="color--dark-purple">Our story</h2>
+                <h2 className="color--dark-purple mb30">Our story</h2>
                 {content.ourStory.map((t, i) => (
                   <p key={i}>
                     {t}
@@ -64,7 +64,7 @@ const AboutUs = () => {
                 ))}
               </div>
               <div className="get-involved mt50 container--narrow pb60--sm">
-                <h2 className="color--dark-purple">Get involved</h2>
+                <h2 className="color--dark-purple mb30">Get involved</h2>
                 <p>
                   We’re eager to continue refining, validating, and evangelizing
                   our approach. If you believe your expertise is a good fit for
@@ -77,10 +77,10 @@ const AboutUs = () => {
             </div>
             <div className="col-6 pl80--lg flex-col flex-jc--fs bg--off-white--sm flex-ai--c--sm">
               <div className="our-team container--narrow pv60--sm flex-ai--c--sm flex flex-col">
-                <h2 className="color--dark-purple mb40">Our team</h2>
+                <h2 className="color--dark-purple mb30">Our team</h2>
                 {content.team.map((member, ind) => (
                   <div
-                    className="member flex flex-row flex-jc--sb flex-ai--fs flex-col--sm flex-ai--c--sm mb40--sm"
+                    className="member flex flex-row flex-jc--sb flex-ai--fs flex-col--sm flex-ai--c--sm mb20 mb40--sm"
                     key={ind}
                   >
                     <img
@@ -109,7 +109,7 @@ const AboutUs = () => {
                 ))}
               </div>
               <div className="container--narow pv60 pt0--sm">
-                <h2 className="color--dark-purple">Special thanks</h2>
+                <h2 className="color--dark-purple mb30">Special thanks</h2>
                 <p>
                   ImSafe is a team effort, and we want to thank the following
                   volunteers for their indispensable work:

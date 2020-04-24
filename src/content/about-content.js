@@ -21,17 +21,25 @@ export default {
       imageName: "niko",
     },
     {
-      bio: `Sasha is the Director of Engineering at [Blink UX](https://blinkux.com), a leading digital design-build firm, and led engineering at [Redshift Digital](https://redshiftdigital.com/) before that. At both, Sasha architected and built a range of applications for both smaller startups and large tech companies. Before joining agency life, he ran the web development curriculum and built the learning management system at [Bloc.io](https://bloc.io), a digital engineering bootcamp.`,
+      bio: `Sasha is the Director of Engineering at [Blink UX](https://blinkux.com), a leading digital design-build firm, and led engineering at [Redshift Digital](https://redshiftdigital.com/) before that. At both, Sasha has architected and built a range of applications for both smaller startups and large tech companies. Prior to his agency work, Sasha ran the web development curriculum and built the learning management system at [Bloc.io](https://bloc.io), a digital engineering bootcamp.`,
       name: "Sasha Klein",
       linkedin: "https://www.linkedin.com/in/sasha-klein/",
-      imageName: "sasha-2",
+      imageName: "sasha",
+    },
+    // {
+    //   bio: `Tiago is a Director at The Rock Creek Group, a global investment and advisory firm based in Washington, DC, where he returned after years in FinTech startups. He was the Lead Data Scientist and CTO at FS Card, led the development of FS Card's underwriting engine, and was a Data Engineer at Oportun finance. Prior to The Rock Creek Group he also spent two years with the Securities and Exchange Commission as an Economic Fellow in the Division of Risk, Strategy, and Financial Innovation. Prior to his work at the SEC, Requeijo was an associate in the Market Risk Management and Analysis group at Goldman Sachs in New York, where he focused on value-at-risk and stress testing for equity products. He has also worked as a quantitative analyst at The Options Clearing Corporation and at ING Investment Management. Requeijo is an assistant professor of finance in the School of Business at George Mason University, where he teaches courses in managerial economics, risk management, and portfolio management.`,
+    //   name: 'Tiago Requeijo',
+    //   linkedin: 'https://www.linkedin.com/in/tiagorequeijo/',
+    //   imageName: 'tiago'
+    // },
+    {
+      bio: `Sepehr is a senior data practitioner with 5+ years of experience in healthcare as a data scientist, data engineer, and ML engineer. He has worked on developing platforms for ML to boost data scientist productivity when engineering features and training hundreds of thousands of models in distributed environments. He is passionate about bringing best practices from software engineering (visibility, reproducibility, and testability) to modernize data workflows.`,
+      name: "Sepehr Sadighpour",
+      linkedin: "https://www.linkedin.com/in/sepehrs/",
+      imageName: "sep",
     },
   ],
   volunteers: [
-    {
-      name: "Sepehr Sadighpour",
-      link: "https://www.linkedin.com/in/sepehrs/",
-    },
     {
       name: "Sara Keats",
       link: "https://www.linkedin.com/in/sarakeats/",
