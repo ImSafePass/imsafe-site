@@ -52,5 +52,9 @@ export default {
       name: "Lauren Javor",
       link: "https://www.linkedin.com/in/lauren-javor-67ba952a/",
     },
+    {
+      name: "Gabe Pompilius",
+      link: "https://www.linkedin.com/in/gpompilius/",
+    },
   ],
 }

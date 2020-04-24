@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Markdown from "react-markdown"
 
+import Enter from "@components/enter"
 import content from "@content/about-content"
 import { useAssets } from "@utils/getAssets"
 import LinkedinIcon from "@images/icons/linkedin.svg"
@@ -54,7 +55,7 @@ const AboutUs = () => {
         <div className="container--only-lg pb100--lg pt50--lg">
           <div className="row flex-col--sm flex-ai--fs">
             <div className="col-6 flex-col flex-jc--fs flex">
-              <div className="our-story container--narrow">
+              <div className="our-story container--narrow mb50">
                 <h2 className="color--dark-purple mb30">Our story</h2>
                 {content.ourStory.map((t, i) => (
                   <p key={i}>
@@ -63,71 +64,74 @@ const AboutUs = () => {
                   </p>
                 ))}
               </div>
-              <div className="get-involved mt50 container--narrow pb60--sm">
-                <h2 className="color--dark-purple mb30">Get involved</h2>
-                <p>
-                  We’re eager to continue refining, validating, and evangelizing
-                  our approach. If you believe your expertise is a good fit for
-                  what we are building, please{" "}
-                  <Link className="color--dark-purple bold" to="/contact-us/">
-                    contact us.
-                  </Link>
-                </p>
-              </div>
+              <Enter>
+                <div className="get-involved container--narrow pb60--sm">
+                  <h2 className="color--dark-purple mb30">Get involved</h2>
+                  <p>
+                    We’re eager to continue refining, validating, and
+                    evangelizing our approach. If you believe your expertise is
+                    a good fit for what we are building, please{" "}
+                    <Link className="color--dark-purple bold" to="/contact-us/">
+                      contact us.
+                    </Link>
+                  </p>
+                </div>
+              </Enter>
             </div>
             <div className="col-6 pl80--lg flex-col flex-jc--fs bg--off-white--sm flex-ai--c--sm">
               <div className="our-team container--narrow pv60--sm flex-ai--c--sm flex flex-col">
                 <h2 className="color--dark-purple mb30">Our team</h2>
                 {content.team.map((member, ind) => (
-                  <div
-                    className="member flex flex-row flex-jc--sb flex-ai--fs flex-col--sm flex-ai--c--sm mb20 mb40--sm"
-                    key={ind}
-                  >
-                    <img
-                      src={images[member.imageName]}
-                      className="about-image mr10 ml15"
-                      alt={member.name}
-                    />
-                    <div className="flex-col flex-jc--fs pl20--lg">
-                      <div className="flex flex-row flex-col--sm flex-ai--c--sm mt20--sm">
+                  <Enter key={ind}>
+                    <div className="member flex flex-row flex-jc--sb flex-ai--fs flex-col--sm flex-ai--c--sm mb20 mb40--sm">
+                      <img
+                        src={images[member.imageName]}
+                        className="about-image mr10 ml15"
+                        alt={member.name}
+                      />
+                      <div className="flex-col flex-jc--fs pl20--lg">
+                        <div className="flex flex-row flex-col--sm flex-ai--c--sm mt20--sm">
+                          <a
+                            className="color--royal-blue flex flex-row flex-jc--fs flex-ai--c"
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <h3>{member.name}</h3>
+                            <LinkedinIcon
+                              className="fill--royal-blue ml15"
+                              style={{ marginTop: -1 }}
+                            ></LinkedinIcon>
+                          </a>
+                        </div>
+                        <Markdown className="markdown" source={member.bio} />
+                      </div>
+                    </div>
+                  </Enter>
+                ))}
+              </div>
+              <Enter>
+                <div className="container--narow pb60 pt40 pt0--sm">
+                  <h2 className="color--dark-purple mb30">Special thanks</h2>
+                  <p>
+                    ImSafe is a team effort, and we want to thank the following
+                    volunteers for their indispensable work:
+                  </p>
+                  <ul>
+                    {content.volunteers.map(v => (
+                      <li key={v.name}>
                         <a
-                          className="color--royal-blue flex flex-row flex-jc--fs flex-ai--c"
-                          href={member.linkedin}
+                          href={v.link}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <h3>{member.name}</h3>
-                          <LinkedinIcon
-                            className="fill--royal-blue ml15"
-                            style={{ marginTop: -1 }}
-                          ></LinkedinIcon>
+                          {v.name}
                         </a>
-                      </div>
-                      <Markdown className="markdown" source={member.bio} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="container--narow pv60 pt0--sm">
-                <h2 className="color--dark-purple mb30">Special thanks</h2>
-                <p>
-                  ImSafe is a team effort, and we want to thank the following
-                  volunteers for their indispensable work:
-                </p>
-                <ul>
-                  {content.volunteers.map(v => (
-                    <li key={v.name}>
-                      <Link
-                        to={v.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {v.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Enter>
             </div>
           </div>
         </div>
