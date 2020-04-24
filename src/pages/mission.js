@@ -22,7 +22,7 @@ const Mission = () => {
                 liberties.
               </h1>
             </div>
-            <div className="col-5 pt20--lg mb20--sm ml10--neg--sm">
+            <div className="col-5 pt40--lg mb20--sm ml20--neg--sm">
               <WomanWithPhone className="mt40--lg ml50--lg w275 w225--sm mv30--neg--sm" />
             </div>
           </div>
