@@ -73,6 +73,7 @@ const ContactUs = () => {
               data-netlify="true"
               className="flex flex-col col-5 w100p--sm"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <input type="hidden" name="bot-field" />
               <label className="flex flex-col mv10">
                 Name
