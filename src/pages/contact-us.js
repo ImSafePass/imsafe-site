@@ -12,6 +12,7 @@ const ContactUs = () => {
   const [email, setEmail] = useState("")
   const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
+  const [sent, setSent] = useState(false)
 
   const onSubmit = event => {
     event.preventDefault()
@@ -41,6 +42,7 @@ const ContactUs = () => {
         setEmail("")
         setSubject("")
         setMessage("")
+        setSent(true)
       })
       .catch(() => {
         alert(
@@ -73,6 +75,7 @@ const ContactUs = () => {
               data-netlify-honeypot="bot-field"
               className="flex flex-col col-5 w100p--sm"
             >
+              {sent ? <p>Message sent. Thanks!</p> : null}
               <input type="hidden" name="form-name" value="contact" />
               <input type="hidden" name="bot-field" />
               <label className="flex flex-col mv10">
