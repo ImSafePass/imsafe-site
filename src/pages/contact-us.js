@@ -70,13 +70,15 @@ const ContactUs = () => {
             <div className="col-1"></div>
             <form
               onSubmit={onSubmit}
+              name="contact"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              className="flex flex-col col-5 w100p--sm"
+              onSubmit={onSubmit}
             >
-              {sent ? <p>Message sent. Thanks!</p> : null}
               <input type="hidden" name="form-name" value="contact" />
+              className="flex flex-col col-5 w100p--sm" >
+              {sent ? <p>Message sent. Thanks!</p> : null}
               <input type="hidden" name="bot-field" />
               <label className="flex flex-col mv10">
                 Name
