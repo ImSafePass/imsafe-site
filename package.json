@@ -30,6 +30,7 @@
     "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -44,7 +45,7 @@
     "s": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "deploy:prod": "yarn build && node deploy.js"
   },
   "repository": {
     "type": "git",

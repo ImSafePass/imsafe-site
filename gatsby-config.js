@@ -4,12 +4,12 @@ const hero = require("./src/content/home-content").hero
 
 module.exports = {
   siteMetadata: {
-    title: `ImSafe Pass`,
+    title: `ImSafe Health`,
     shortTitle: `ImSafe`,
     description: hero.title,
     heroDescription: hero.subtitle,
     author: `@ImSafePass`,
-    siteURL: `https://imsafepass.com`,
+    siteURL: `https://imsafehealth.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
