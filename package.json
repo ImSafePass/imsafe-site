@@ -1,13 +1,14 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "imsafe-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Main website for ImSafe Health",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Sasha Klein <sasha@imsafepass.com>",
   "dependencies": {
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-canonical-urls": "^2.3.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",
@@ -30,7 +31,10 @@
     "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
+    "aws-cli": "^0.0.2",
+    "aws-sdk": "^2.664.0",
     "dotenv": "^8.2.0",
+    "gatsby-plugin-s3": "^0.3.3",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -38,14 +42,13 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npx -n \"-r dotenv/config\" gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "s": "gatsby develop",
+    "start": "npx -n \"-r dotenv/config\" npm run develop",
+    "s": "npx -n \"-r dotenv/config\" gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy:prod": "yarn build && node deploy.js"
+    "deploy": "npx -n \"-r dotenv/config\" gatsby-plugin-s3 deploy -y && aws cloudfront create-invalidation --distribution-id E17APZT8094FJC --paths \"/*\""
   },
   "repository": {
     "type": "git",
