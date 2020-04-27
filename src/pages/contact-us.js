@@ -1,7 +1,53 @@
-import React from "react"
+import React, { useState } from "react"
 import SEO from "@components/seo"
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 const ContactUs = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [subject, setSubject] = useState("")
+  const [message, setMessage] = useState("")
+
+  const onSubmit = event => {
+    event.preventDefault()
+
+    const params = {
+      email,
+      name,
+      message,
+      subject,
+    }
+
+    const form = event.target
+    const data = {
+      "form-name": form.getAttribute("name"),
+      ...params,
+    }
+
+    const body = encode(data)
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
+    })
+      .then(() => {
+        setName("")
+        setEmail("")
+        setSubject("")
+        setMessage("")
+      })
+      .catch(() => {
+        alert(
+          "Something went wrong! Please email sasha@imsafepass.com to let us know."
+        )
+      })
+  }
   return (
     <div className="page contact-us">
       <SEO title="Contact Us" />
@@ -21,6 +67,7 @@ const ContactUs = () => {
             </div>
             <div className="col-1"></div>
             <form
+              onSubmit={onSubmit}
               method="post"
               netlify-honeypot="bot-field"
               data-netlify="true"
@@ -32,7 +79,12 @@ const ContactUs = () => {
                 <input
                   type="text"
                   name="name"
+                  value={name}
+                  onChange={({ target }) => {
+                    setName(target.value)
+                  }}
                   id="name"
+                  required
                   className="w500 w100p--sm"
                 />
               </label>
@@ -41,6 +93,10 @@ const ContactUs = () => {
                 <input
                   type="email"
                   name="email"
+                  value={email}
+                  onChange={({ target }) => {
+                    setEmail(target.value)
+                  }}
                   id="email"
                   required
                   className="w500 w100p--sm"
@@ -51,6 +107,10 @@ const ContactUs = () => {
                 <input
                   type="text"
                   name="subject"
+                  value={subject}
+                  onChange={({ target }) => {
+                    setSubject(target.value)
+                  }}
                   id="subject"
                   required
                   className="w500 w100p--sm"
@@ -60,6 +120,10 @@ const ContactUs = () => {
                 Message
                 <textarea
                   name="message"
+                  value={message}
+                  onChange={({ target }) => {
+                    setMessage(target.value)
+                  }}
                   id="message"
                   required
                   rows="5"

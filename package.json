@@ -31,10 +31,6 @@
     "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
-    "aws-cli": "^0.0.2",
-    "aws-sdk": "^2.664.0",
-    "dotenv": "^8.2.0",
-    "gatsby-plugin-s3": "^0.3.3",
     "prettier": "^1.19.1"
   },
   "keywords": [
