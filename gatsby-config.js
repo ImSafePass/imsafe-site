@@ -2,7 +2,7 @@ const path = require("path")
 
 const hero = require("./src/content/home-content").hero
 
-const { S3_BUCKET_NAME } = process.env
+// const { S3_BUCKET_NAME } = process.env
 
 module.exports = {
   siteMetadata: {
@@ -78,14 +78,14 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-s3`,
-      options: {
-        bucketName: S3_BUCKET_NAME,
-        protocol: "https",
-        hostname: "imsafehealth.com",
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-s3`,
+    //   options: {
+    //     bucketName: S3_BUCKET_NAME,
+    //     protocol: "https",
+    //     hostname: "imsafehealth.com",
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
